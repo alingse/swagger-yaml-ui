@@ -10,7 +10,9 @@ ENV SWAGGER_YAML "/app/swagger.yaml"
 
 COPY . ./
 
-RUN chmod +x /app/run.sh
+RUN touch swagger.yaml && \
+    chmod +x run.sh
+
 
 EXPOSE 8080
 
