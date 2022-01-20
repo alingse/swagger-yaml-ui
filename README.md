@@ -13,7 +13,7 @@ docker build . -t swagger-yaml-ui:latest
 run
 
 ```bash
-docker run -v `pwd`/example.yaml:/app/swagger.yaml swagger-yaml-ui:latest
+docker run -p 0.0.0.0:80:8080/tcp -v `pwd`/example.yaml:/app/swagger.yaml swagger-yaml-ui:latest
 ```
 
 or in docker-compose.yaml
@@ -28,5 +28,5 @@ or in docker-compose.yaml
     environment:
       BASE_URL: "/swagger"
     ports:
-      - "9590:8080"
+      - "8080:8080"
 ```
