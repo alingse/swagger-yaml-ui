@@ -13,10 +13,20 @@ docker build . -t swagger-yaml-ui:latest
 run
 
 ```bash
-docker run -t -i -v `pwd`/example.yaml:/app/swagger.yaml:ro swagger-yaml-ui:latest
+docker run -v `pwd`/example.yaml:/app/swagger.yaml swagger-yaml-ui:latest
 ```
 
-or docker-compose
+or in docker-compose.yaml
 
 
-
+```yaml
+  swagger-yaml-ui:
+    image: swagger-yaml-ui:latest
+    container_name: "swagger-yaml-ui"
+    volumes:
+      - ./example.yaml:/app/swagger.yaml:ro
+    environment:
+      BASE_URL: "/swagger"
+    ports:
+      - "9590:8080"
+```
