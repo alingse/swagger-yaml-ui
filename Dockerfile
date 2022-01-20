@@ -7,7 +7,9 @@ WORKDIR /app
 
 ENV SWAGGER_YAML "/app/swagger.yaml"
 
-RUN chmod +x run.sh
+COPY . ./
+
+RUN chmod +x /app/run.sh
 
 
 EXPOSE 8080
