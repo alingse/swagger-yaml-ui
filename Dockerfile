@@ -3,6 +3,8 @@ FROM swaggerapi/swagger-ui
 RUN apk add --update npm && \
     npm install -g @apidevtools/swagger-cli
 
+LABEL maintainer="alingse"
+
 WORKDIR /app
 
 ENV SWAGGER_YAML "/app/swagger.yaml"
