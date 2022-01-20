@@ -1,6 +1,6 @@
 FROM swaggerapi/swagger-ui
 
-RUN apk update && apk add --no-cache "npm" && \
+RUN apk add --update npm && \
     npm i swagger-cli
 
 
