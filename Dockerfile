@@ -1,7 +1,7 @@
 FROM swaggerapi/swagger-ui
 
 RUN apk add --update npm && \
-    npm i swagger-cli
+    npm install -g @apidevtools/swagger-cli
 
 
 WORKDIR /app
