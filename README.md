@@ -5,6 +5,12 @@ swagger-ui with yaml support (we don't want to use swagger.json)
 
 ## Usage
 
+
+```bash
+docker pull alingse/swagger-yaml-ui:latest
+```
+
+
 serve yaml file
 
 ```bash
