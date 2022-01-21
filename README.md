@@ -2,21 +2,16 @@
 
 docker images support yaml 
 
-## dev
+## Usage
 
-build
-
-```bash
-docker build . -t alingse/swagger-yaml-ui:latest
-```
-
-run serve
+serve yaml file
 
 ```bash
 docker run -p 0.0.0.0:80:8080/tcp -v `pwd`/example.yaml:/app/swagger.yaml alingse/swagger-yaml-ui:latest
 ```
 
-or use in docker-compose.yaml
+
+or used in docker-compose.yaml
 
 
 ```yaml
@@ -30,3 +25,23 @@ or use in docker-compose.yaml
     ports:
       - "80:8080"
 ```
+
+## Dev
+
+
+build
+
+```bash
+docker build . -t alingse/swagger-yaml-ui:latest
+```
+
+publish
+
+```bash
+docker push alingse/swagger-yaml-ui:latest
+```
+
+example yaml
+
+see https://petstore.swagger.io/ and https://editor.swagger.io/
+
