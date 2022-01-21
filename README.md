@@ -1,6 +1,7 @@
 # swagger-yaml-ui
 
-docker images support yaml 
+swagger-ui with yaml support (we don't want to use swagger.json)
+
 
 ## Usage
 
