@@ -9,7 +9,10 @@ swagger-ui with yaml support (we don't want to use swagger.json)
 ```bash
 docker pull alingse/swagger-yaml-ui:latest
 ```
-
+or
+```bash
+docker pull ghcr.io/alingse/swagger-yaml-ui:main
+```
 
 serve yaml file
 
